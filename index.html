@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комики обсуждают тайтл | Максат Мадали & Адиль Абдигапар</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        animeBgStart: '#0d0221',
+                        animeBgMid: '#1a0536',
+                        animeBgEnd: '#05021a',
+                        neonPurple: '#a855f7',
+                        neonCyan: '#06b6d4',
+                        neonPink: '#ec4899',
+                        neonOrange: '#f97316',
+                    },
+                    fontFamily: {
+                        unbounded: ['Unbounded', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-glow': '0 0 25px rgba(168, 85, 247, 0.4), 0 0 10px rgba(6, 182, 212, 0.3)',
+                        'btn-glow': '0 0 20px rgba(249, 115, 22, 0.5)',
+                        'card-glow': '0 8px 32px 0 rgba(168, 85, 247, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0d0221 0%, #1e0842 50%, #050114 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(168, 85, 247, 0.5);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25);
+        }
+
+        .glowing-title {
+            text-shadow: 0 0 15px rgba(168, 85, 247, 0.6), 0 0 30px rgba(6, 182, 212, 0.4);
+        }
+
+        .anime-tag-glow {
+            text-shadow: 0 0 10px rgba(249, 115, 22, 0.8);
+        }
+    </style>
+</head>
+<body class="text-white antialiased selection:bg-neonPurple selection:text-white pb-16">
+
+    <!-- Фоновые неоновые свечения -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-neonPurple/20 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="fixed bottom-10 right-1/4 w-96 h-96 bg-neonCyan/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- ШАПКА / HERO SECTION -->
+        <header class="py-10 md:py-16">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                
+                <!-- Левый блок (Текст) -->
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-block mb-3 px-4 py-1.5 rounded-full bg-neonPurple/20 border border-neonPurple/40 text-neonCyan font-unbounded text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                        Максат Мадали & Адиль Абдигапар
+                    </div>
+                    
+                    <h1 class="font-unbounded font-black text-3xl sm:text-4xl lg:text-5xl leading-tight uppercase tracking-tight mb-4 glowing-title">
+                        Комики обсуждают тайтл
+                    </h1>
+
+                    <div class="inline-block bg-gradient-to-r from-neonPink via-neonOrange to-amber-500 text-white font-unbounded font-extrabold text-sm sm:text-base px-5 py-2.5 rounded-xl shadow-lg anime-tag-glow uppercase mb-2">
+                        «Магическая битва» / «Наруто»
+                    </div>
+                </div>
+
+                <!-- Правый блок (Картинка hero.jpg) -->
+                <div class="w-full max-w-sm md:max-w-xs lg:max-w-sm flex-shrink-0">
+                    <div class="relative rounded-2xl p-1 bg-gradient-to-b from-neonPurple via-neonCyan to-transparent shadow-neon-glow transition-transform duration-500 hover:scale-[1.02]">
+                        <div class="overflow-hidden rounded-xl bg-slate-950 aspect-[4/5] relative">
+                            <img 
+                                src="hero.jpg" 
+                                alt="Максат Мадали & Адиль Абдигапар" 
+                                class="w-full h-full object-cover object-top"
+                                onerror="this.onerror=null; this.src='https://placehold.co/600x750/1e0842/06b6d4?text=hero.jpg'; "
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-3 left-3 right-3 text-center text-xs text-white/70 font-mono">
+                                hero.jpg
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- СЕКЦИЯ РАСПИСАНИЯ ГОРОДОВ -->
+        <main class="mt-4 md:mt-8">
+            <div class="text-center mb-10">
+                <h2 class="font-unbounded font-extrabold text-2xl sm:text-3xl uppercase tracking-wider text-white inline-flex items-center gap-3">
+                    <span class="w-8 h-1 bg-neonCyan rounded-full"></span>
+                    Расписание тура
+                    <span class="w-8 h-1 bg-neonCyan rounded-full"></span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- АСТАНА - СЕАНС 1 (НАРУТО) -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 border-l-4 border-l-neonOrange">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-md bg-neonOrange/20 text-neonOrange text-xs font-unbounded font-bold uppercase">
+                            Тайтл: Наруто
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Город</span>
+                            <div class="font-unbounded font-black text-2xl text-white mt-0.5">Астана</div>
+                        </div>
+
+                        <div class="h-px bg-white/10 w-full"></div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Дата</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">30 октября</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Время</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">18:00</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Место</span>
+                            <div class="font-medium text-base text-white/80 mt-0.5">StandUp Club Astana</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a 
+                            href="https://ticketon.kz/stand-up/event/tckt2-komiki-obsuzhdayut-taitl-naruto-astana-30oct" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="block w-full py-3.5 px-4 text-center font-unbounded font-bold text-sm text-white bg-gradient-to-r from-neonOrange to-neonPink rounded-xl shadow-btn-glow hover:brightness-110 active:scale-95 transition-all duration-200 uppercase tracking-wider"
+                        >
+                            Билеты
+                        </a>
+                    </div>
+                </div>
+
+                <!-- АСТАНА - СЕАНС 2 (МАГИЧЕСКАЯ БИТВА) -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 border-l-4 border-l-neonPurple">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-md bg-neonPurple/20 text-neonPurple text-xs font-unbounded font-bold uppercase">
+                            Тайтл: Магическая битва
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Город</span>
+                            <div class="font-unbounded font-black text-2xl text-white mt-0.5">Астана</div>
+                        </div>
+
+                        <div class="h-px bg-white/10 w-full"></div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Дата</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">30 октября</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Время</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">20:30</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Место</span>
+                            <div class="font-medium text-base text-white/80 mt-0.5">StandUp Club Astana</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a 
+                            href="https://ticketon.kz/stand-up/event/tckt2-komiki-obsuzhdayut-taitl-magicheskaya-bitva-astana-30oct?date_from=2026-10-30" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="block w-full py-3.5 px-4 text-center font-unbounded font-bold text-sm text-white bg-gradient-to-r from-neonPurple to-neonPink rounded-xl shadow-btn-glow hover:brightness-110 active:scale-95 transition-all duration-200 uppercase tracking-wider"
+                        >
+                            Билеты
+                        </a>
+                    </div>
+                </div>
+
+                <!-- САНКТ-ПЕТЕРБУРГ - СЕАНС 1 (НАРУТО) -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 border-l-4 border-l-neonOrange">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-md bg-neonOrange/20 text-neonOrange text-xs font-unbounded font-bold uppercase">
+                            Тайтл: Наруто
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Город</span>
+                            <div class="font-unbounded font-black text-2xl text-white mt-0.5">Санкт-Петербург</div>
+                        </div>
+
+                        <div class="h-px bg-white/10 w-full"></div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Дата</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">31 октября</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Время</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">18:00</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Место</span>
+                            <div class="font-medium text-base text-white/80 mt-0.5">Stage StandUp Club</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a 
+                            href="https://stagestandup.ru/chotam" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="block w-full py-3.5 px-4 text-center font-unbounded font-bold text-sm text-white bg-gradient-to-r from-neonOrange to-neonPink rounded-xl shadow-btn-glow hover:brightness-110 active:scale-95 transition-all duration-200 uppercase tracking-wider"
+                        >
+                            Билеты
+                        </a>
+                    </div>
+                </div>
+
+                <!-- САНКТ-ПЕТЕРБУРГ - СЕАНС 2 (МАГИЧЕСКАЯ БИТВА) -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 border-l-4 border-l-neonPurple">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-md bg-neonPurple/20 text-neonPurple text-xs font-unbounded font-bold uppercase">
+                            Тайтл: Магическая битва
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Город</span>
+                            <div class="font-unbounded font-black text-2xl text-white mt-0.5">Санкт-Петербург</div>
+                        </div>
+
+                        <div class="h-px bg-white/10 w-full"></div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Дата</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">31 октября</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Время</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">20:30</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Место</span>
+                            <div class="font-medium text-base text-white/80 mt-0.5">Stage StandUp Club</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a 
+                            href="https://stagestandup.ru/chotam" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="block w-full py-3.5 px-4 text-center font-unbounded font-bold text-sm text-white bg-gradient-to-r from-neonPurple to-neonPink rounded-xl shadow-btn-glow hover:brightness-110 active:scale-95 transition-all duration-200 uppercase tracking-wider"
+                        >
+                            Билеты
+                        </a>
+                    </div>
+                </div>
+
+                <!-- МОСКВА -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 border-l-4 border-l-neonCyan">
+                    <div class="space-y-4">
+                        <div class="inline-block px-3 py-1 rounded-md bg-neonCyan/20 text-neonCyan text-xs font-unbounded font-bold uppercase">
+                            Тайтл: Наруто / Магическая битва
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Город</span>
+                            <div class="font-unbounded font-black text-2xl text-white mt-0.5">Москва</div>
+                        </div>
+
+                        <div class="h-px bg-white/10 w-full"></div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Дата</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">1 ноября</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Время</span>
+                            <div class="font-semibold text-lg text-white/90 mt-0.5">19:00</div>
+                        </div>
+
+                        <div>
+                            <span class="text-[11px] font-bold font-unbounded tracking-widest text-neonCyan uppercase">Место</span>
+                            <div class="font-medium text-base text-white/80 mt-0.5">Stage StandUp</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a 
+                            href="https://ticketscloud.com/v1/widgets/common?token=eyJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSIsInR5cCI6IkpXVCJ9.eyJwIjoiNmFiYTJlZWMyMTc5ZjU5NjVlNWZlOGY5In0.tURmcudkXin5umol012Vc7a5w-u7MlOTWF3tVRx_QPw&lang=ru&event=6ac538ab6774454a6478658a&s=1" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="block w-full py-3.5 px-4 text-center font-unbounded font-bold text-sm text-white bg-gradient-to-r from-neonOrange to-neonPink rounded-xl shadow-btn-glow hover:brightness-110 active:scale-95 transition-all duration-200 uppercase tracking-wider"
+                        >
+                            Билеты
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="mt-20 text-center text-xs text-white/40 border-t border-white/10 pt-6">
+            © 2026 Стендап Шоу «Комики обсуждают тайтл»
+        </footer>
+
+    </div>
+
+</body>
+</html>
